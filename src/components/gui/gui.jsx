@@ -490,3 +490,24 @@ const mapStateToProps = state => ({
 export default injectIntl(connect(
     mapStateToProps
 )(GUIComponent));
+
+<div className="mobile-layout">
+    {/* ÜST: sahne */}
+    <StageWrapper className="stage" />
+
+    {/* Sahne altı kontrol bar */}
+    <div className="controls-bar">
+        <MenuBar className="menu-bar" />
+        <SpriteSelector className="sprite-selector" />
+        <EditorTabs className="editor-tabs" />
+    </div>
+
+    {/* Blok arayüzü */}
+    <Blocks className="blocks" />
+
+    {/* ALT: kategori + yatay blok paleti */}
+    <div className="bottom-palette">
+        <BlockCategoryMenu className="category-menu" />
+        <BlockPalette className="block-palette" />
+    </div>
+</div>
