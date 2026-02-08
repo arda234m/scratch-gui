@@ -130,8 +130,17 @@ const GUIComponent = props => {
         ...componentProps
     } = omit(props, 'dispatch');
     if (children) {
-        return <Box {...componentProps}>{children}</Box>;
+        return (
+            <Box {...componentProps}>
+                <div className="mobile-layout">
+                    {children}
+                </div>
+            </Box>
+        );
     }
+
+    return null;
+};
 
     const tabClassNames = {
         tabs: styles.tabs,
